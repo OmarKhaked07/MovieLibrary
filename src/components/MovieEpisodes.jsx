@@ -53,7 +53,7 @@ const MovieEpisodes = () => {
   return (
     <div>
        <div className='text-center'>
-        <h1 className='title'  onClick={() => navigate("/series/info")}>{name}</h1>
+        <a className='title fs-1' onClick={() => navigate("/series/info")}>{name}</a>
        </div>
         <GridSystem colCount={3}>
           {
