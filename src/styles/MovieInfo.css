@@ -1,0 +1,17 @@
+.actor-card img {
+  width: 70%;
+}
+
+
+
+.tv-poster {
+  padding: 0px 20px;
+}
+
+.tv-poster img {
+  width: 100%;
+}
+
+.tv-info h1 {
+  font-size: 56px;
+}

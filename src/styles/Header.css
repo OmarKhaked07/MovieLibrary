@@ -1,0 +1,22 @@
+.header {
+  background-color: black;
+  display: inline-flex;
+  color: white;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-info {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  color: #fff;
+  background-color: #3f51b5;
+}
+
+.header-info * {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
