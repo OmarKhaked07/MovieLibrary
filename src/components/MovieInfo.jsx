@@ -10,7 +10,12 @@ function MovieInfo() {
 
   const [showPost, setShowPost] = useState([])
   const [actor, setActor] = useState([])
-  const apiUrl = `https://api.tvmaze.com/shows/${id}`
+  
+
+
+  useEffect(() => {
+
+    const apiUrl = `https://api.tvmaze.com/shows/${id}`
   const apiUrlActor = `https://api.tvmaze.com/shows/${id}?embed=cast`
 
   async function pullData(){
@@ -22,17 +27,15 @@ function MovieInfo() {
     setActor(responseData1)
   }
 
-
-  useEffect(() => {
     pullData()
-  },[])
+  },[]) // eslint-disable-line react-hooks/exhaustive-deps
 
 
   return (
     <div className="container-fluid ">
       <div className="row mb-4">
         <div className="tv-poster col-12 col-md-4">
-          <img src={showPost.image?.medium}/>
+          <img src={showPost.image?.medium} alt={showPost.name}/>
         </div>
         <div className="tv-info col-12 col-md-8">
           <h1> {showPost.name}</h1>
@@ -50,7 +53,7 @@ function MovieInfo() {
       {actor._embedded?.cast.map((act,index) => {
         return (
           <div className="col-md-4 actor-card p-5 text-center" key={index}>
-            <img src={act.person.image.medium}/>
+            <img src={act.person.image.medium} alt={act.person.name}/>
             <div>
             Actor: {act.person.name}
             </div>

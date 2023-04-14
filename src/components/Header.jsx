@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <div className='text-center mb-3'>
       <div className='header'>
-        <div><img width={"85"} src='https://img.icons8.com/clouds/200/000000/retro-tv.png'/></div>
+        <div><img width={"85"} src='https://img.icons8.com/clouds/200/000000/retro-tv.png' alt="TV-ICON"/></div>
        <div ><h1>Tv Maze Api</h1></div>
         <div><AiFillHome onClick={() => navigate("/home")} size={"25"} color={"lightblue"} /></div>
       </div>
